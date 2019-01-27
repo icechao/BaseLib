@@ -1,10 +1,5 @@
 package com.base.lib.base;
 
-import android.arch.lifecycle.Lifecycle;
-import android.arch.lifecycle.LifecycleObserver;
-import android.arch.lifecycle.OnLifecycleEvent;
-import android.databinding.ViewDataBinding;
-
 import java.io.Serializable;
 
 /*************************************************************************
