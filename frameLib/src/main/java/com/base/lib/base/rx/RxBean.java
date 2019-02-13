@@ -1,9 +1,9 @@
-package com.base.lib.base;
+package com.base.lib.base.rx;
 
 /*************************************************************************
  * Description   :
  *
- * @PackageName  : com.huobi.demo.websocket
+ * @PackageName  : com.base.lib
  * @FileName     : RxBean.java
  * @Author       : chao
  * @Date         : 2019/1/23
@@ -12,21 +12,17 @@ package com.base.lib.base;
  *************************************************************************/
 public class RxBean {
 
-    public RxBean(EventType status) {
+    public RxBean(String status) {
         this.status = status;
     }
 
-    public enum EventType {
-        TypeSocket
-    }
+    private String status;
 
-    private EventType status;
-
-    public EventType getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(EventType status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 }

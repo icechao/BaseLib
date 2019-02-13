@@ -1,8 +1,10 @@
-package com.base.lib.base;
+package com.base.lib.base.rx;
 
 import com.jakewharton.rxrelay2.PublishRelay;
 import com.jakewharton.rxrelay2.Relay;
 import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 /*************************************************************************
  * Description   :
@@ -17,10 +19,10 @@ import io.reactivex.Observable;
 
 public class RxBus {
     private static volatile RxBus instance;
-    private final Relay<Object> mBus;
+    private final Relay<Object> rxBus;
 
     public RxBus() {
-        this.mBus = PublishRelay.create().toSerialized();
+        this.rxBus = PublishRelay.create().toSerialized();
     }
 
     public static RxBus getInstance() {
@@ -35,22 +37,23 @@ public class RxBus {
     }
 
     public void post(Object obj) {
-        mBus.accept(obj);
+        rxBus.accept(obj);
     }
 
     public <T> Observable<T> toObservable(Class<T> tClass) {
-        return mBus.ofType(tClass);
+        return rxBus.ofType(tClass);
     }
 
     public Observable<Object> toObservable() {
-        return mBus;
+        return rxBus;
     }
 
     public boolean hasObservers() {
-        return mBus.hasObservers();
+        return rxBus.hasObservers();
     }
 
     private static class Holder {
         private static final RxBus BUS = new RxBus();
     }
+
 }

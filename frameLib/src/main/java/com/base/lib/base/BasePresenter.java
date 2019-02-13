@@ -3,8 +3,6 @@ package com.base.lib.base;
 import android.arch.lifecycle.Lifecycle;
 import android.arch.lifecycle.LifecycleObserver;
 import android.arch.lifecycle.OnLifecycleEvent;
-import io.reactivex.functions.Predicate;
-import io.reactivex.schedulers.Schedulers;
 
 /*************************************************************************
  * Description   :
@@ -19,6 +17,7 @@ import io.reactivex.schedulers.Schedulers;
 public class BasePresenter<T extends BaseContract.View> implements LifecycleObserver, BaseContract.Presenter {
 
     private T view;
+    private String rxEventType = getClass().getName();
 
     public BasePresenter(T view) {
         this.view = view;
@@ -26,7 +25,7 @@ public class BasePresenter<T extends BaseContract.View> implements LifecycleObse
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     public void onCreate() {
-
+        //添加RX观查者
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
