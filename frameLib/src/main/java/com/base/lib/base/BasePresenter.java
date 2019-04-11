@@ -25,7 +25,7 @@ public class BasePresenter<T extends BaseContract.View> implements LifecycleObse
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     public void onCreate() {
-        //添加RX观查者
+
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)

@@ -19,9 +19,9 @@ public interface BaseContract {
      */
     interface View {
 
-        public <Q extends BaseContract.ViewModel> void bindData(Q model);
+        <Q extends BaseContract.ViewModel> void bindData(Q model);
 
-        public <T extends BaseContract.ViewModel> T getViewModel();
+        <T extends BaseContract.ViewModel> T getViewModel();
     }
 
     interface Presenter<T extends BaseContract.View> {

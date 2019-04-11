@@ -1,1 +1,1 @@
-include ':frameLib'
+include ':frameLib', ':netlib'
