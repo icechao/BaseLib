@@ -19,16 +19,16 @@ public interface BaseContract {
      */
     interface View {
 
-        <Q extends BaseContract.ViewModel> void bindData(Q model);
+        <Q extends BaseContract.ViewModel> void setViewModel(Q model);
 
-        <T extends BaseContract.ViewModel> T getViewModel();
+        <Q extends BaseContract.ViewModel> Q getViewModel();
     }
 
     interface Presenter<T extends BaseContract.View> {
 
     }
 
-    interface NetWork {
+    interface DataLogicWork {
 
     }
 

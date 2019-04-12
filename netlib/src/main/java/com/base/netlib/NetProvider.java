@@ -78,9 +78,8 @@ public class NetProvider<Q> {
      */
     public Retrofit getRetrofit() {
 
-        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {
-            @Override
-            public void log(String message) {
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor(message -> {
+            if (BuildConfig.DEBUG) {
                 try {
                     String text = URLDecoder.decode(message, "utf-8");
                     Log.e("OKHttp-----", text);

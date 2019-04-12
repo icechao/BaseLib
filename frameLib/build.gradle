@@ -37,7 +37,9 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+    implementation 'com.jakewharton.rxrelay2:rxrelay:2.0.0'
 
-
+    // 依赖以下两个库，会自动引用基础库与Android库
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
     implementation 'com.orhanobut:logger:2.2.0'
 }

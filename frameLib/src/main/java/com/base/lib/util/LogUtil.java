@@ -1,7 +1,8 @@
-package com.huobi.demo;
+package com.base.lib.util;
 
-import android.util.Log;
 
+import android.os.Build;
+import com.orhanobut.logger.BuildConfig;
 import com.orhanobut.logger.Logger;
 
 
@@ -16,22 +17,30 @@ import com.orhanobut.logger.Logger;
  * @version      : V1
  *************************************************************************/
 public class LogUtil {
-    private final static String TAG = "CHAO=>";
+    private final static String TAG = "LogUtil=>";
 
     public static void i(Object o) {
-        Logger.e(TAG, String.valueOf(o));
+        if (BuildConfig.DEBUG) {
+            Logger.e(TAG, String.valueOf(o));
+        }
     }
 
     public static void d(Object o) {
-        Logger.e(TAG, String.valueOf(o));
+        if (BuildConfig.DEBUG) {
+            Logger.e(TAG, String.valueOf(o));
+        }
     }
 
     public static void e(Object o) {
-        Logger.e(TAG, String.valueOf(o));
+        if (BuildConfig.DEBUG) {
+            Logger.e(TAG, String.valueOf(o));
+        }
     }
 
     public static void w(Object o) {
-        Logger.e(TAG, String.valueOf(o));
+        if (BuildConfig.DEBUG) {
+            Logger.e(TAG, String.valueOf(o));
+        }
     }
 
 }

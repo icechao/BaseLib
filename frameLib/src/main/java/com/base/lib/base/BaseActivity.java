@@ -27,7 +27,7 @@ public abstract class BaseActivity<T extends BasePresenter, Q extends ViewDataBi
 
     protected void initPresenter(Class<T> clazz) {
         try {
-            Constructor<T> constructor = clazz.getConstructor(BaseContract.View.class, BaseContract.NetWork.class);
+            Constructor<T> constructor = clazz.getConstructor(BaseContract.View.class);
             presenter = constructor.newInstance(this);
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
