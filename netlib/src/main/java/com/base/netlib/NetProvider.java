@@ -58,6 +58,13 @@ public class NetProvider<Q> {
         return provider;
     }
 
+    public NetProvider getInstance() {
+        if (null == provider) {
+            throw new RuntimeException("The Retrofit cilent has not init!");
+        }
+        return provider;
+    }
+
     public Q getService() {
         if (null == service) {
             throw new RuntimeException("service has not init!");
