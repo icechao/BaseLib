@@ -1,5 +1,7 @@
 # BaseLib
-#app基础架构封装
+
+
+## app基础架构封装
 
 
   基于mvp和mvvm的整合使用 mvp + rxAnrdoi + retrofit + databinding架构
@@ -24,10 +26,8 @@
   如果两个很简单可以考虑使用同一个
   
   
-  
 
- 
- ##NetLib 网络框架独立于FrameLib
+ ## NetLib 网络框架独立于FrameLib
   
   基于RxAndroid + retrofit实现网络框架
   1. NetProvider 为网络请求对象生成
@@ -42,4 +42,4 @@
           
            
 
- ##Utils:分类别独立封装,分常用和不常用(暂未封装)
+ ## Utils:分类别独立封装,分常用和不常用(暂未封装)
