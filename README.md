@@ -2,9 +2,9 @@
 #app基础架构封装
 
 
-  基于mvp和mvvm的整合使用mvp+databinding架构
+  基于mvp和mvvm的整合使用 mvp + rxAnrdoi + retrofit + databinding架构
   
-  
+  ##FrameLib MVP基础架构
   activity:做与页面相关的逻辑
   
   
@@ -22,8 +22,24 @@
             
             
   如果两个很简单可以考虑使用同一个
- 
- 
-#网络Lib还没有后期独立封装,返回数据源到
+  
+  
+  
 
-#Utils:分类别独立封装,分常用和不常用
+ 
+ ##NetLib 网络框架独立于FrameLib
+  
+  基于RxAndroid + retrofit实现网络框架
+  1. NetProvider 为网络请求对象生成
+  2. ModelFilteredFactory为请求接口处理类
+              ```ModelFilteredFactory.compose(NetProvider.getInstance("url",ApiService.class).getXXX(params)).subscribe(new SimpleSubscriber<Bean.class>(){...})```
+              
+              url : 服务器基础url
+              ApiService: 服务器接口api类
+              Bean.class: 返回数据解析bean
+           
+          
+          
+           
+
+ ##Utils:分类别独立封装,分常用和不常用(暂未封装)
