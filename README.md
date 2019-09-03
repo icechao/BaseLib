@@ -4,7 +4,7 @@
 ## app基础架构封装
 
 
-  基于mvp和mvvm的整合使用 mvp + rxAnrdoi + retrofit + databinding架构
+  基于mvp和mvvm的整合使用 mvp + rxAnrdoid + retrofit + databinding架构
   
   ### FrameLib MVP基础架构
   
